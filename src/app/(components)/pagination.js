@@ -1,8 +1,6 @@
 'use client'
 import { useRouter, useSearchParams } from 'next/navigation'
-import React from 'react'
-
-const pagination = ({haspreviouspage,hasnextpage,length}) => {
+const Pagination = ({haspreviouspage,hasnextpage,length}) => {
     const router = useRouter()
     const searchParams = useSearchParams()
     const page = searchParams.get('page') ?? '1'
@@ -22,7 +20,7 @@ console.log(abc)
             {/* {page} / {Math.ceil(length/per_page)} */}
             {abc.map((inde)=>{
                 return(
-                   <h3 className='inline-block px-3'><button className={`${page == inde && 'text-red-600'}`} key={inde} onClick={()=>router.push(`/new?page=${Number(inde)}&per_page=${per_page}`)}>{inde}</button> </h3>
+                   <h3 key={inde} className='inline-block px-3'><button className={`${page == inde && 'text-red-600'}`} key={inde} onClick={()=>router.push(`/new?page=${Number(inde)}&per_page=${per_page}`)}>{inde}</button> </h3>
                 ) 
             })}
 
@@ -33,4 +31,4 @@ console.log(abc)
   )
 }
 
-export default pagination
+export default Pagination

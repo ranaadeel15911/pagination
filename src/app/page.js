@@ -21,7 +21,7 @@ const data = [
 export default function Home({searchparams}) {
   console.log(searchparams)
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-black">
       <Link href={'/new'} className="text-white border border-white rounded-full px-2">Go to Pagination</Link>
     </main>
   );

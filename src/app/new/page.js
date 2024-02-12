@@ -86,7 +86,7 @@ export default function page({searchParams}) {
             // <p key={{name:'card'}{name:'card'}p>
         }
      </main>
-<div className="fixed top-[620px] left-11 ">
+<div className="w-fit translate-y-24 m-auto ">
      <Pagination
      haspreviouspage = {start > 0}
      hasnextpage = {end > data.length}
